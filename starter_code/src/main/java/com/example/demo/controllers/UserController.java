@@ -2,8 +2,8 @@ package com.example.demo.controllers;
 
 import java.util.Optional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,7 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RequestMapping("/api/user")
 public class UserController {
 
-	static final Logger logger = LoggerFactory.getLogger(UserController.class);
+	static final Logger logger = LogManager.getLogger(UserController.class);
 	
 	@Autowired
 	private UserRepository userRepository;
